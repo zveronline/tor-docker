@@ -1,0 +1,16 @@
+services:
+  tor-test:
+    image: hardandheavy/tor:8
+    container_name: tor-test
+    volumes:
+      - ../../torrc:/etc/tor/torrc
+
+  app-test:
+    image: hardandheavy/example-for-tor:1
+    container_name: app-test
+    depends_on:
+      - tor-test
+    ports:
+      - 3000:3000
+    environment:
+      - HTTPS_PROXY=socks5://tor-test:9150
