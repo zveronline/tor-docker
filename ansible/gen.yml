@@ -21,20 +21,20 @@
       private: false
 
   tasks:
-    - name: Создание папки кэша переменных secure/var
+    - name: Creating a variable cache folder secure/var
       ansible.builtin.file:
         path: '../secure/var'
         state: directory
-    - name: Сохранение tor_bridge_line_1
+    - name: Save tor_bridge_line_1
       local_action: copy content={{ tor_bridge_line_1 }} dest=../secure/var/tor_bridge_line_1
-    - name: Сохранение tor_bridge_line_2
+    - name: Save tor_bridge_line_2
       local_action: copy content={{ tor_bridge_line_2 }} dest=../secure/var/tor_bridge_line_2
-    - name: Сохранение tor_bridge_line_3
+    - name: Save tor_bridge_line_3
       local_action: copy content={{ tor_bridge_line_3 }} dest=../secure/var/tor_bridge_line_3
-    - name: Сохранение tor_bridge_line_4
+    - name: Save tor_bridge_line_4
       local_action: copy content={{ tor_bridge_line_4 }} dest=../secure/var/tor_bridge_line_4
 
-    - name: Создание файла tor
+    - name: Creating a file tor
       ansible.builtin.template:
         src: tor-torrc.j2
         dest: '{{ tor_file }}'
