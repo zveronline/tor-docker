@@ -36,5 +36,5 @@
 
     - name: Creating a file tor
       ansible.builtin.template:
-        src: tor-torrc.j2
-        dest: '{{ tor_file }}'
+        src: torrc.j2
+        dest: ../torrc
