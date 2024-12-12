@@ -1,6 +1,6 @@
 services:
   tor-test:
-    image: hardandheavy/tor:8
+    image: hardandheavy/tor:9
     container_name: tor-test
     volumes:
       - ../../torrc:/etc/tor/torrc
