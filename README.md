@@ -1,5 +1,4 @@
 # Tor in Docker
-Running tor in a [Docker container](https://hub.docker.com/repository/docker/hardandheavy/tor/general).
 
 ### Requirements
 - Ubuntu
